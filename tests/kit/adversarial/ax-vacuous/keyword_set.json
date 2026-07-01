@@ -1,0 +1,11 @@
+{
+  "keywords": [
+    "first-outcome", "first_outcome", "vacuous", "vacuous-green",
+    "green without red", "green_without_red", "never red", "never failed",
+    "detect_first_outcome_log_tampering", "log_integrity",
+    "check_first_outcome_log_integrity", "first-outcome-log",
+    "failed->passed", "flip", "backdated", "entry dropped", "test-first",
+    "red-green", "red run evidence"
+  ],
+  "note": "Spec-derived lexical oracle keywords for hz-vacuous-test (3.5c scan)."
+}

@@ -1,0 +1,93 @@
+{
+  "attest_keys_sha": "44e329334eb905f0ddcdbfa4ed409ad8b6986365910e68c7966741c15c732c49",
+  "goals_sections": {
+    "Commitments": "cdf5fdab76e8ae50fd26a78ff85bc81cb681e1fa476543f476a321293ef97a8e",
+    "Falsifier": "2a01fe4cfecb26edcae4bb5fff2aacde19479f9f5bd2d54e4902de212989e4d2"
+  },
+  "harness_contract_sha": "e5617cca9450e98cc0aee8fb7de7289466122ffed508277a7259bd1eee63edb1",
+  "preflight_sha": "6620c46c63f7bd0758dccb1cccea4500e0a08abafa817a32d499776a6e8a122e",
+  "refusal_critical_rows": [
+    {
+      "exercise_scenario": "ax-compliance",
+      "falsifier_layer": "execution_time",
+      "hazard_id": "hz-compliance-gameable",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "2"
+    },
+    {
+      "exercise_scenario": "ax-adr-edit",
+      "falsifier_layer": "pending",
+      "hazard_id": "hz-adr-silent-edit",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "2"
+    },
+    {
+      "exercise_scenario": "ax-sessionstart",
+      "falsifier_layer": "pending",
+      "hazard_id": "hz-sessionstart-skipped",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "2"
+    },
+    {
+      "exercise_scenario": "ax-vacuous",
+      "falsifier_layer": "pending",
+      "hazard_id": "hz-vacuous-test",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "1"
+    },
+    {
+      "exercise_scenario": "ax-reachability",
+      "falsifier_layer": "pending",
+      "hazard_id": "hz-reachability-regression-ignored",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "1"
+    },
+    {
+      "exercise_scenario": "ax-relaxation",
+      "falsifier_layer": "execution_time",
+      "hazard_id": "hz-conversational-relaxation",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "1"
+    },
+    {
+      "exercise_scenario": "ax-frame-validity",
+      "falsifier_layer": "execution_time",
+      "hazard_id": "hz-frame-validity-unexpressible",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "1"
+    },
+    {
+      "exercise_scenario": "ax-runtime-role",
+      "falsifier_layer": "execution_time",
+      "hazard_id": "hz-runtime-role-unannotated",
+      "refusal_critical": true,
+      "roadmap_defense_distance": "1"
+    }
+  ],
+  "registered_checks": [
+    "check_project_structure",
+    "check_decisions_have_template",
+    "check_non_determinism_policy_exists",
+    "check_active_phase_exists",
+    "check_falsifier_declared",
+    "check_falsifier_consistency",
+    "check_frame_validity_audit",
+    "check_pre_stamp_review_exists",
+    "check_load_bearing_assumptions_closed_at_gate",
+    "check_reachability_probes_pass",
+    "check_bug_log_exists",
+    "check_paradigm_declared",
+    "check_kit_version_declared",
+    "check_ci_matrix_declared",
+    "check_adr_immutability",
+    "check_hazard_coverage",
+    "check_adr_index",
+    "check_first_outcome_log_integrity",
+    "check_hooks_installed",
+    "check_author_fill_contamination",
+    "check_commitment_lock",
+    "check_pilot_phase",
+    "check_falsifier_freshness"
+  ],
+  "runtime_roles_sha": "d8918e637fa9c9d2f6ee5ab7a578e259942106ace386eb475d78adfee07a3276"
+}

@@ -1,0 +1,8 @@
+{
+  "keywords": [
+    "settings.json", "SessionStart", "PreToolUse", "hooks", "preflight",
+    "compliance", "protect_adrs", "check_hooks_installed", "install_hooks",
+    "sessionstart-skipped", "hook", "guard"
+  ],
+  "note": "Spec-derived lexical oracle keywords for hz-sessionstart-skipped (3.5c scan)."
+}

@@ -1,0 +1,8 @@
+{
+  "keywords": [
+    "attestation", "attest", "token", "runtime_role", "author",
+    "contributor", "check_author_fill_contamination", "unattested",
+    "no-token", "author-fill", "runtime_roles", "author-fill-contamination"
+  ],
+  "note": "Spec-derived lexical oracle keywords for hz-runtime-role-unannotated (3.5c scan)."
+}

@@ -1,0 +1,56 @@
+#!/bin/bash
+# .git/hooks/pre-commit
+#
+# Runs the kit's checks before every commit. If any fail, the commit
+# is blocked until you fix the issue or use `git commit --no-verify`
+# (which you should rarely do).
+#
+# Install with: bash install_hooks.sh
+
+set -e
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+
+# R-1.2: portable Python interpreter detection.
+# On Windows, `python` is often a Microsoft Store stub that prints a help
+# message and exits non-zero; only `py` (the Python Launcher) actually runs.
+# On Linux/Mac, `python3` is the canonical name. We try each in order and
+# pick the first one whose `--version` actually succeeds.
+PYTHON_CMD=""
+for candidate in python3 python py; do
+    if command -v "$candidate" >/dev/null 2>&1; then
+        if "$candidate" --version >/dev/null 2>&1; then
+            PYTHON_CMD="$candidate"
+            break
+        fi
+    fi
+done
+if [ -z "$PYTHON_CMD" ]; then
+    echo "No working Python interpreter found (tried python3, python, py)." >&2
+    exit 1
+fi
+
+echo ">>> Running preflight (using $PYTHON_CMD)..."
+"$PYTHON_CMD" preflight.py
+
+echo ""
+echo ">>> Running tests..."
+# R-1.3: pytest exit code 5 ("no tests collected") is the legitimate state at
+# Gate 0, before any phase requirements have tests. Accept 0 and 5 as success;
+# fail on any other code.
+set +e
+"$PYTHON_CMD" -m pytest -q
+PYTEST_EXIT=$?
+set -e
+if [ "$PYTEST_EXIT" -ne 0 ] && [ "$PYTEST_EXIT" -ne 5 ]; then
+    echo "pytest failed with exit code $PYTEST_EXIT" >&2
+    exit "$PYTEST_EXIT"
+fi
+
+echo ""
+echo ">>> Running coverage check..."
+"$PYTHON_CMD" check_coverage.py
+
+echo ""
+echo ">>> All checks passed."

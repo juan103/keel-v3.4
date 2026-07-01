@@ -1,0 +1,26 @@
+{
+  "_comment": "witness_3 (clean): both the SessionStart compliance hook and the PreToolUse ADR guard are wired.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python preflight.py --compliance"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/hooks/protect_adrs.py"
+          }
+        ]
+      }
+    ]
+  }
+}

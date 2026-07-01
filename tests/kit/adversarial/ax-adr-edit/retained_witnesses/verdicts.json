@@ -1,0 +1,17 @@
+{
+  "witness_1_caught_class": {
+    "expected_verdict": true,
+    "clause": "class_predicate",
+    "note": "Caught by _immutable_body_changed: ## Context section silently revised after acceptance"
+  },
+  "witness_2_caught_other": {
+    "expected_verdict": true,
+    "clause": "other_clause",
+    "note": "Caught by _consequences_changed: ## Consequences section silently revised after acceptance; survives surgical weakening of class-predicate anchor"
+  },
+  "witness_3_clean": {
+    "expected_verdict": false,
+    "clause": null,
+    "note": "Clean: current ADR body matches its acceptance snapshot exactly"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "witness_1_caught_class": {
+    "expected_verdict": true,
+    "clause": "class_predicate",
+    "note": "Caught by _commitments_section_diverged: ## Commitments section softened, diverges from snapshot"
+  },
+  "witness_2_caught_other": {
+    "expected_verdict": true,
+    "clause": "falsifier_section",
+    "note": "Caught by _falsifier_section_diverged: ## Falsifier section softened (non-predicate clause; survives Commitments-anchor weakening)"
+  },
+  "witness_3_clean": {
+    "expected_verdict": false,
+    "clause": null,
+    "note": "Clean: both locked sections match the snapshot, no escape exhibited"
+  }
+}

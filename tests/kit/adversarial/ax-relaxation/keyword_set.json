@@ -1,0 +1,9 @@
+{
+  "keywords": [
+    "commitment", "commitment_lock", "check_commitment_lock", "snapshot",
+    "locked surface", "goals_sections", "falsifier", "commitments",
+    "divergence", "softened", "override", "adjudicated", "relaxation",
+    "refusal", "weakened"
+  ],
+  "note": "Spec-derived lexical oracle keywords for hz-conversational-relaxation (3.5c scan)."
+}

@@ -1,0 +1,26 @@
+{
+  "_comment": "witness_1 (class-predicate caught): SessionStart compliance hook mangled (no --compliance flag); PreToolUse ADR guard intact.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python preflight.py --strict"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/hooks/protect_adrs.py"
+          }
+        ]
+      }
+    ]
+  }
+}

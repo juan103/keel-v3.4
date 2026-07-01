@@ -1,0 +1,4 @@
+{
+  "class": "a recorded first-outcome flipped failed->passed across commits with no code change (vacuous green), or a first-outcome entry dropped across commits",
+  "anchor": "_green_without_red"
+}

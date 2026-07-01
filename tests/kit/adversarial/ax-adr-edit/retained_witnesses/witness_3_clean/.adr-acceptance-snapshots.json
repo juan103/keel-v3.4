@@ -1,0 +1,3 @@
+{
+  "decisions/0001-test-constraint.md": "# ADR-0001: Test Constraint\n\n**Status:** accepted\n\n## Context\n\nThis fixture ADR establishes a stable constraint for the adversarial exercise.\nThe system must preserve its ratified record across sessions.\n\n## Decision\n\nWe apply this constraint for the duration of the phase. The ratified decision\nis immutable once accepted per CLAUDE.md section 7.\n\n## Consequences\n\nThis decision constrains future flexibility in the trade-off space. Any\nsubsequent change to the core decision requires a new superseding ADR.\n"
+}

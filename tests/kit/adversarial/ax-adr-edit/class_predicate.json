@@ -1,0 +1,4 @@
+{
+  "class": "accepted ADR body changed outside ## Errata or legitimate Status transition after acceptance commit",
+  "anchor": "_immutable_body_changed"
+}

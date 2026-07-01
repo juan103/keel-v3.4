@@ -1,0 +1,17 @@
+{
+  "witness_1_caught_class": {
+    "expected_verdict": true,
+    "clause": "class_predicate",
+    "note": "Caught by _green_without_red: a 2nd commit flipped test_a failed->passed with no code change (vacuous green). git history shipped as git-history.bundle; named_check clones it and runs the real detector."
+  },
+  "witness_2_caught_other": {
+    "expected_verdict": true,
+    "clause": "entry_dropped",
+    "note": "Caught by _entry_dropped: a 2nd commit dropped the test_a entry (no flip marker). Survives the surgical weakening of the class-predicate anchor. git history shipped as git-history.bundle."
+  },
+  "witness_3_clean": {
+    "expected_verdict": false,
+    "clause": null,
+    "note": "Clean: a single honest baseline commit (both tests red). The real detector has nothing to compare -> []. git history shipped as git-history.bundle."
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "class": "a .claude/settings.json that is missing or mangles the SessionStart 'preflight.py --compliance' hook so the session-start compliance block is skipped (hz-sessionstart-skipped)",
+  "anchor": "_sessionstart_hook_missing",
+  "mutation_definition": "PROVISIONAL"
+}

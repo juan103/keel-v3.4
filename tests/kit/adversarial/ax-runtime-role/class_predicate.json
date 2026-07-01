@@ -1,0 +1,4 @@
+{
+  "class": "runtime_role=author field set to a non-empty value with no paired valid attestation token",
+  "anchor": "_author_field_unattested"
+}

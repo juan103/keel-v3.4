@@ -1,0 +1,6 @@
+{
+  "tests/test_BUG_001_placeholder_verdict.py::test_BUG_001_empty_verdict_is_flagged_control": {
+    "first": "failed",
+    "head": "7a950c0"
+  }
+}

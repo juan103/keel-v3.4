@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# v3.3: reachability session-mode cache is machine/network state, not project record.
+.reachability-cache.json
+# v3.4: per-check freshness cache is machine/run state, not project record.
+.checks-cache.json
+# NOTE: tests/.first-outcome-log.json is deliberately NOT ignored — it is
+# the red-run evidence record and must be committed (see tests/conftest.py).
+# v3.4 Phase 2a: HMAC secrets are LOCAL ONLY -- never commit (attestation log + registry ARE committed).
+goals/.attest-secrets.json
+.p4-trial/
+.p4-iso/

@@ -1,0 +1,15 @@
+{
+  "_comment": "witness_2 (other-clause caught; survives the SessionStart-anchor weakening): SessionStart compliance hook intact; PreToolUse ADR guard MISSING.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python preflight.py --compliance"
+          }
+        ]
+      }
+    ]
+  }
+}

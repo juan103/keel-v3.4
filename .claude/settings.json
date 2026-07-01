@@ -1,0 +1,26 @@
+{
+  "_comment": "KEEL v3.3 Claude Code hooks template. Installed to .claude/settings.json by install_hooks.sh (it will not overwrite an existing settings.json). SessionStart runs the mechanical CLAUDE.md §0 compliance block into context; PreToolUse asks the human before any agent edit to an accepted ADR (the interactive half of the ADR-immutability guard).",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python preflight.py --compliance"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/hooks/protect_adrs.py"
+          }
+        ]
+      }
+    ]
+  }
+}

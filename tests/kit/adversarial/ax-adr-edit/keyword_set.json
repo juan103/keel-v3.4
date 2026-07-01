@@ -1,0 +1,8 @@
+{
+  "keywords": [
+    "adr_guard", "detect_adr_mutations", "acceptance_commit", "immutable",
+    "errata", "strip_mutable", "consequences", "adr-silent-edit",
+    "git", "commit", "accepted", "mutation", "ratified", "body_changed"
+  ],
+  "note": "Spec-derived lexical oracle keywords for hz-adr-silent-edit (3.5c scan)."
+}

@@ -1,0 +1,58 @@
+{
+  "source": "Atlas audit of keel_v3.3, 2026-06-17",
+  "sha256": "8d0b045ae7fc56498e48f33b64d934c82a73bdbffdab7f4670976f3b4e897dc4",
+  "hazards": {
+    "hz-compliance-gameable": {
+      "refusal_critical": true,
+      "severity": "med"
+    },
+    "hz-adr-silent-edit": {
+      "refusal_critical": true,
+      "severity": "high"
+    },
+    "hz-sessionstart-skipped": {
+      "refusal_critical": true,
+      "severity": "med"
+    },
+    "hz-vacuous-test": {
+      "refusal_critical": true,
+      "severity": "high"
+    },
+    "hz-reachability-regression-ignored": {
+      "refusal_critical": true,
+      "severity": "med"
+    },
+    "hz-bug-outside-lifecycle": {
+      "refusal_critical": false,
+      "severity": "low"
+    },
+    "hz-conversational-relaxation": {
+      "refusal_critical": true,
+      "severity": "high"
+    },
+    "hz-frame-validity-unexpressible": {
+      "refusal_critical": true,
+      "severity": "high"
+    },
+    "hz-runtime-role-unannotated": {
+      "refusal_critical": true,
+      "severity": "high"
+    },
+    "hz-pilot-phase-unexpressible": {
+      "refusal_critical": false,
+      "severity": "med"
+    },
+    "hz-kit-not-versioned": {
+      "refusal_critical": false,
+      "severity": "med"
+    },
+    "hz-no-ci-matrix": {
+      "refusal_critical": false,
+      "severity": "med"
+    },
+    "hz-orientation-cost": {
+      "refusal_critical": false,
+      "severity": "low"
+    }
+  }
+}

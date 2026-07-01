@@ -1,0 +1,37 @@
+{
+  "contract_hash": "68bab04c897ac7c2d1aa1d76bebf8ff6019156576b992956101b0a8779394d5b",
+  "gate_coverage": {
+    "cuts": [
+      [
+        "ax-reachability",
+        "the reachability probe is inherently a live/non-deterministic dependency check; its silent escape (a failing live probe ignored via a stale cached PASS) cannot be expressed as a deterministic tree property without simulating the probe, which would make the gate test the simulation not the hazard."
+      ]
+    ],
+    "denominator": "7/8",
+    "eligible": 7,
+    "total": 8
+  },
+  "in_boundary_suite": {
+    "F1_differential_observability": "tests/kit/adversarial/test_observability_*.py (per eligible scenario)",
+    "F2_class_not_instance": "escape_variants/ (>=2 blind variants per scenario)",
+    "F3_projection_leak": "tests/kit/adversarial/test_f3_projection_leak.py",
+    "detector_recall_route_liveness": "tests/kit/adversarial/test_detector_recall.py (ROUTE-LIVE-ONLY)",
+    "import_disjointness": "tests/kit/adversarial/test_import_manifest.py (NARROW import-hygiene)",
+    "lexical_oracle_scan": "tests/kit/adversarial/test_lexical_scan.py (necessary-not-sufficient)"
+  },
+  "residues": {
+    "detector_recall": "ROUTE-LIVE-ONLY(Phase4)",
+    "escape_vector_provocation": "UNVALIDATED(Phase4)",
+    "gate_coverage": "7/8 (cut: ax-reachability)",
+    "gate_execution_audit": "TRACE-BOUND(runner-regress-terminal)",
+    "ledger_integrity_scope": "APPEND-ONLY-IN-REPO(externalization-Phase4)",
+    "negative_control_scope": "CLEAN+SCRIPTED-NOISE(not-live-noise)",
+    "negative_live_result_interpretation": "AMBIGUOUS(no-attempt | unmodeled-vector)",
+    "observable_faithfulness": "UNVALIDATED(Phase4)",
+    "oracle_leakage_scope": "PATH-EXCLUSION+CONTENT-HASH+DECODE-NORMALIZE+PATH-RULE+LEXICAL+ENV-SCRUB; named residues: installed-module-reachability, unbounded/nested/semantic-transforms (incl. git-native loose-object framing), residual-env, paraphrase, self-hosted-vocab-overlap",
+    "positive_result_interpretation": "BOUNDED(crossed-authored-observable | not-class-span)",
+    "verdict_dependence_scope": "SENSITIVITY-NOT-EXCLUSIVITY"
+  },
+  "schema": "keel-harness-report/1",
+  "scope": "IN-BOUNDARY instrument validation (Phase 3.5a-c): the differential-observability gate is built + self-validated across the gate-eligible scenarios. LIVE-agent faithfulness / provocation / detector-recall-adequacy and the CI-boundary F7 are Phase 4 -- see the residues; not asserted here."
+}

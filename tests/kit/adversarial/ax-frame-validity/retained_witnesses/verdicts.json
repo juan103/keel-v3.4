@@ -1,0 +1,17 @@
+{
+  "witness_1_caught_class": {
+    "expected_verdict": true,
+    "clause": "class_predicate",
+    "note": "Caught by _author_verdict_null: author_verdict is empty string (class anchor escape)"
+  },
+  "witness_2_caught_other": {
+    "expected_verdict": true,
+    "clause": "_audit_artifact_missing",
+    "note": "Caught by _audit_artifact_missing: audit artifact file does not exist (non-predicate clause; survives anchor weakening)"
+  },
+  "witness_3_clean": {
+    "expected_verdict": false,
+    "clause": null,
+    "note": "Clean: author_verdict is non-empty and audit artifact file exists"
+  }
+}

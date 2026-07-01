@@ -1,0 +1,13 @@
+{
+  "phase": 0,
+  "pending_refusal_critical": [
+    "hz-compliance-gameable",
+    "hz-adr-silent-edit",
+    "hz-sessionstart-skipped",
+    "hz-vacuous-test",
+    "hz-reachability-regression-ignored",
+    "hz-conversational-relaxation",
+    "hz-frame-validity-unexpressible",
+    "hz-runtime-role-unannotated"
+  ]
+}

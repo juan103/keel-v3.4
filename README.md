@@ -189,5 +189,14 @@ never let anything green that doesn't honestly pass — the kit holds itself to 
 
 ## Licence
 
-Not yet specified — there is no `LICENSE` file in the repo. Until the owner adds one, treat it as
-all-rights-reserved and ask before reuse.
+MIT — free for anyone to use, modify, and build on, for any purpose including commercial. See
+[LICENSE](LICENSE).
+
+**A note on how this was built, and on risk.** KEEL was built with substantial help from AI. I've
+done my best to identify and address the ways it could go wrong — that's much of what the kit is —
+but a methodology whose own headline is "0 of 7 refusal-critical hazards executably closed" is
+telling you plainly: there are almost certainly risks here that neither I nor the tools have
+identified yet. Use it with that in mind. It's provided as-is, with no warranty; I take no
+responsibility for what happens if it breaks something. You're responsible for verifying it fits
+your own use. That's not boilerplate — it's the same honest-about-limits stance the kit tries to
+enforce everywhere else.

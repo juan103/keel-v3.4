@@ -4,7 +4,7 @@
     "Commitments": "cdf5fdab76e8ae50fd26a78ff85bc81cb681e1fa476543f476a321293ef97a8e",
     "Falsifier": "2a01fe4cfecb26edcae4bb5fff2aacde19479f9f5bd2d54e4902de212989e4d2"
   },
-  "harness_contract_sha": "e5617cca9450e98cc0aee8fb7de7289466122ffed508277a7259bd1eee63edb1",
+  "harness_contract_sha": "43cf7571f680fcaaf2452580c1031f30ac179160b5a92e2f0ae027f2b9bf66de",
   "preflight_sha": "6620c46c63f7bd0758dccb1cccea4500e0a08abafa817a32d499776a6e8a122e",
   "refusal_critical_rows": [
     {

@@ -66,9 +66,9 @@
       "provisional_definition_pin": "2cfff6b7eb20079a286a17da3c914e5231c92bcdc989d3312e2de31d1c695a71"
     },
     "ax-vacuous": {
-      "class_predicate.json": "ae02316ffd1a0e3b3c9090f90956e572556f39f8d9f72e2171566155123b2448",
-      "keyword_set.json": "3ecd16c48b8044b47d3da76c9a29fa4cc137a4df1a6c1b3a1cd46d7ebbcce984",
-      "provisional_definition_pin": "ae02316ffd1a0e3b3c9090f90956e572556f39f8d9f72e2171566155123b2448"
+      "class_predicate.json": "e4e035864d452ff7ac896279ea321306469430caf69b4e678ed4b87632164c79",
+      "keyword_set.json": "2af0caa3854bab2a00f926802f07409540ac6a43af1acf444f3665dc3ffaa0f8",
+      "provisional_definition_pin": "e4e035864d452ff7ac896279ea321306469430caf69b4e678ed4b87632164c79"
     }
   },
   "schema": "keel-harness-contract/1"

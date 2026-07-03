@@ -7,11 +7,11 @@
 
 ## Claim
 
-KEEL v3.4 closes the refusal-critical gaps the v3.3 self-audit named: every refusal-critical hazard has at least one wired, biting, execution-time falsifier on its silent-escape path (d≥1), and each is live-exercised against an AI adversary at closure.
+**AMENDED by ADR-0008 (2026-07-03) — the original claim was NOT achieved and is superseded.** The original: every refusal-critical hazard would get a wired, biting, execution-time falsifier (d≥1) on its silent-escape path, each live-exercised against an AI adversary at closure. The ratified reality: v3.4 *models* every refusal-critical gap and wires an in-boundary mitigating check for each, but the execution-time d≥1 barrier is reached for **none** of them. The honest floor is **0 refusal-critical hazards executably closed** — rows are dispositioned `conditional` / `pending` / `accepted-risk` in `goals/hazard-coverage.md`, each with a falsifiable exit in `goals/honesty-ledger.md`. The F7 live-exercise gate ran but was downgraded to instrument-validation because it could not be run check-blind in this environment (ADR-0007); the gate-integrity/isolation barrier is carried to v3.5.
 
 ## Success criteria
 
-At the Commitment-12 pilot gate: `check_hazard_coverage` returns no violations; every refusal-critical hazard row carries `status=green`; the live-exercise gate has been run against an AI adversary; and the mandatory Atlas re-run adds a fresh confidence interval over the updated hazard list. A meaningful negative result is any refusal-critical hazard that cannot be given a full/execution-time falsifier with d≥1 — that triggers a scope pivot, not a silent demotion.
+**AMENDED by ADR-0008.** The original criterion (every refusal-critical row `status=green` at closure) was NOT met — and the meaningful negative result it named (a refusal-critical hazard that cannot be given a full/execution-time d≥1 falsifier) is exactly what occurred, triggering the ratified **scope pivot** (ADR-0003/0005/0007), not a silent demotion. The ratified success criterion: `check_hazard_coverage` returns no violations; every refusal-critical row is honestly dispositioned (`green` only where a biting execution-time check earns it — none did — else `conditional`/`pending` with a falsifiable exit, or `accepted-risk` with a named assumption); the live-exercise gate was run and its honest outcome recorded (downgrade included, ADR-0007); and both auditors (Atlas structural + trio adversarial) converge on the same 0-executably-closed floor.
 
 ## Falsifier
 
@@ -22,7 +22,7 @@ At the Commitment-12 pilot gate: `check_hazard_coverage` returns no violations; 
 1. Every refusal-critical hazard in the v3.3 audit must have a row in `goals/hazard-coverage.md` with a wired falsifier check (ADR-0002).
 2. The hazard-coverage matrix is hash-pinned against `goals/audit-v3.3.md`; any silent edit to hazard criticality fails `check_hazard_coverage`.
 3. The `d≥1` floor (target_defense_distance ≥ 1) is binding for all refusal-critical hazards — zero-distance rows are impermissible outside `accepted-risk`.
-4. Gate ratification is blocked until all refusal-critical rows are `green` or `accepted-risk`; `accepted-risk` rows require a named assumption in `goals/load-bearing-assumptions.md`.
+4. **AMENDED by ADR-0008 (lock-override authorized).** The original bar — ratification blocked until all refusal-critical rows are `green` or `accepted-risk` — was superseded by the scope pivot (ADR-0003/0005/0007): `conditional` and `pending` are ratified non-green dispositions. Ratification instead requires the **honesty invariant** — every non-green refusal-critical row carries a wired in-boundary mitigating check AND a falsifiable exit condition in `goals/honesty-ledger.md`, the `0 refusal-critical executably closed` headline is held, and no row is greened without a biting execution-time falsifier. `accepted-risk` rows still require a named assumption in `goals/load-bearing-assumptions.md`.
 
 ## Non-commitments
 

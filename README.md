@@ -81,11 +81,16 @@ real check can earn — self-hosting (`keel_v3.4/` runs `preflight.py` on itself
 additions:
 
 - **The commitment lock** (`commitment_lock.py`) — a tamper-evident lock over the load-bearing
-  surface (GOALS commitments, the checks, `preflight.py` itself, the registries), comparing HEAD to
-  the merge-base, so *silently softening* a commitment between commits is caught.
+  surface (GOALS Falsifier/Commitments, the refusal-critical matrix rows, the registered checks,
+  `preflight.py` itself, the registries). The wired check compares the live surface to a committed
+  snapshot, so a naive silent softening is caught; a stronger between-commits (HEAD-vs-merge-base)
+  variant is *built but not yet wired* (`merge_base_divergence`, scheduled for v3.5), and the lock
+  hashes `preflight.py` but not yet the imported check modules (`kit-friction.md` tracks both gaps).
 - **Author-fill attestation** (`attest.py`, `runtime_roles.py`) — HMAC tokens bind a human's key to
-  the exact value of a field that must carry *their* verdict, so an agent can't fill it and pass it
-  off. (Secret is gitignored; four residues named, never counted as covered.)
+  the exact value of a field that must carry *their* verdict, so an unattested or after-the-fact
+  mutated fill is *detected*. (In v3.4's shipped state the row is `conditional`, so this **warns**
+  rather than blocks; and the co-located-secret residue means it can never prove human authorship —
+  four residues named, never counted as covered.)
 - **Frame-validity, pilot-phase, kit-versioning, and CI-matrix checks** — more trusted prose turned
   into gate checks.
 - **The adversarial-exercise harness** (`adversarial_exercise.py` + friends) — a per-hazard test
